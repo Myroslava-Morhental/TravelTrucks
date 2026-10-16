@@ -1,0 +1,57 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--color-inputs);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  line-height: 0;
+}
+
+.logoImage {
+  display: block;
+  width: 136px;
+  height: 15px;
+}
+
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+}
+
+.navLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main);
+  transition: color var(--transition);
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: var(--color-button-hover);
+}
+
+.active {
+  color: var(--color-button);
+}
+
+.active:hover,
+.active:focus-visible {
+  color: var(--color-button-hover);
+}

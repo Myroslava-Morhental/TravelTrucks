@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 320px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--color-main);
+}
+
+.text {
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.action {
+  margin-top: 24px;
+}

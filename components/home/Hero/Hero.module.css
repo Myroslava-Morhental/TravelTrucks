@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--color-white);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  container-type: size;
+}
+
+/* The box keeps the 1440×768 crop, then scales with the viewport.
+   Width stays at the reference zoom unless the Hero is too tall to cover.
+   The translate anchors the same point of the photo, so the roof does not slide off. */
+.mediaZoom {
+  position: absolute;
+  width: 124.1379%;
+  width: max(124.1379cqw, 208cqh);
+  aspect-ratio: 2880 / 1922;
+  left: 50%;
+  top: 0;
+  transform: translate(-49.9884%, -27.5051%);
+}
+
+.background {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 195px;
+  padding-bottom: 326px;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: var(--color-inputs);
+}
+
+.text {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.333;
+  color: var(--color-inputs);
+}
+
+.cta {
+  min-width: 173px;
+  height: 56px;
+  padding: 16px 48px;
+}
