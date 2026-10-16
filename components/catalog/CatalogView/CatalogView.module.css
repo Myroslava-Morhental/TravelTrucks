@@ -1,0 +1,76 @@
+.layout {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.results {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.resultsLoading {
+  min-height: 640px;
+}
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px var(--container-padding);
+  background-color: rgba(223, 223, 223, 0.44);
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 640px;
+  padding: 0px 200px 161px 200px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-inputs);
+  text-align: center;
+}
+
+.emptyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 488px;
+}
+
+.emptyTitle {
+  margin: 21px 0 0 0;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--color-main);
+}
+
+.emptyText {
+  margin: 0 0 43px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main);
+  max-width: 420px;
+}
+
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.loadMoreError {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--color-error);
+}

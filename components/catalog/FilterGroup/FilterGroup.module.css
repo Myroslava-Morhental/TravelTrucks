@@ -1,0 +1,75 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-gray);
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main);
+  cursor: pointer;
+}
+
+.radio {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  background-color: transparent;
+  pointer-events: none;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--transition);
+}
+
+.option:has(input:checked) .radio {
+  border-color: var(--color-text);
+}
+
+.option:has(input:checked) .radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.option:has(input:focus-visible) .radio {
+  outline: 2px solid var(--color-button-hover);
+  outline-offset: 2px;
+}
+
+.label {
+  min-width: 0;
+}

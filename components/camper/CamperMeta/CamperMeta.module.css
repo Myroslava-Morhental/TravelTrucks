@@ -1,0 +1,19 @@
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main);
+  margin-top: 8px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  color: var(--color-rating);
+}
