@@ -1,0 +1,31 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-inputs);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title,
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--color-main);
+}
+
+.price {
+  margin-top: 16px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+}

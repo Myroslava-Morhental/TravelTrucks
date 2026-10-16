@@ -1,0 +1,114 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 505px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-badges);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.mainSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mainSlide {
+  position: relative;
+  height: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-main);
+  transform: translateY(-50%);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.arrow:hover,
+.arrow:focus-visible {
+  background-color: var(--color-button);
+  color: var(--color-white);
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+.thumbs,
+.thumbGrid {
+  width: 100%;
+  height: 144px;
+  margin: 0;
+}
+
+.thumbGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.thumbSlide {
+  height: 144px;
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 144px;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-badges);
+  transition: border-color var(--transition);
+}
+
+.thumb:hover,
+.thumb:focus-visible {
+  border-color: var(--color-accent-light);
+}
+
+.active,
+.active:hover,
+.thumbSlide:global(.swiper-slide-thumb-active) .thumb,
+.thumbSlide:global(.swiper-slide-thumb-active) .thumb:hover {
+  border-color: var(--color-button);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 505px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-badges);
+  color: var(--color-gray);
+}

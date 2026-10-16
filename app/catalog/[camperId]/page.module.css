@@ -1,0 +1,50 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 638px 650px;
+  gap: 24px;
+  align-items: start;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 623px 641px;
+  column-gap: 48px;
+  row-gap: 24px;
+}
+
+.reviews {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  grid-template-rows: subgrid;
+  min-width: 0;
+}
+
+.reviews > section {
+  display: grid;
+  grid-row: 1 / span 2;
+  grid-template-rows: subgrid;
+  min-width: 0;
+}
+
+.booking {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  align-self: start;
+}
